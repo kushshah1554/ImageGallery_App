@@ -18,7 +18,7 @@ const Input = ({
     <div>
       <label
         htmlFor={label}
-        className="text-sm font-medium text-gray-700 mb-2 flex justify-between"
+        className="text-sm font-medium text-gray-600 mb-2 flex justify-between"
       >
        <p>  {label}  </p> 
        {islogin && <p className=" text-purple-500 hover:text-purple-600 font-semibold cursor-pointe cursor-pointer">Forgot?</p>}
@@ -37,7 +37,7 @@ const Input = ({
           name={name}
           placeholder={placeholder}
           required
-          className="w-full py-3 pl-10 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-purple-500 transition-colors "
+          className="w-full py-3 text-white pl-10 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-purple-500 transition-colors  "
         />
         {type === "password" && (
           <div className=" absolute right-0 inset-y-0 flex items-center justify-center pr-2  ">

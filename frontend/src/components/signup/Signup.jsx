@@ -42,72 +42,89 @@ const SignupForm = () => {
 
   return (
     <div className="min-h-screen sm:h-[calc(100vh-5.53rem)] bg-gradient-to-br  from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-      <div className=" bg-white rounded-2xl shadow-2xl  max-w-md flex-1 p-4 space-y-5">
-        <div>
-          <h1 className="text-3xl font-bold text-gray-800 text-center">
-            Create Account
-          </h1>
-          <p className="text-gray-600 text-center">Sign up to get started</p>
-        </div>
+      <div
+  className="
+    bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900
+    rounded-3xl
+    shadow-xl shadow-black/40
+    max-w-md w-full flex-1
+    p-8
+    space-y-6
+    backdrop-blur-sm
+    border border-white/10
+  "
+>
+  <div className="text-center space-y-1">
+    <h1 className="text-3xl font-extrabold text-white">
+      Create Account
+    </h1>
+    <p className="text-gray-300 text-sm">Sign up to get started</p>
+  </div>
 
-        <div className="space-y-4">
-          <Input
-            Icon={User}
-            placeholder="Enter your username"
-            label="Username"
-            type="text"
-            name="username"
-            handleChange={handleChange}
-            formData={formData}
-            error={error}
-          />
-          <Input
-            Icon={Mail}
-            placeholder="Enter your email"
-            label="Email"
-            type="email"
-            name="email"
-            handleChange={handleChange}
-            formData={formData}
-            error={error}
-          />
-          <Input
-            Icon={Lock}
-            placeholder="Enter your password"
-            label="Password"
-            type="password"
-            Eye={Eye}
-            EyeOff={EyeOff}
-            showPassword={showPassword}
-            setShowPassword={setShowPassword}
-            name="password"
-            handleChange={handleChange}
-            formData={formData}
-            error={error}
-          />
-        </div>
+  <div className="space-y-5">
+    <Input
+      Icon={User}
+      placeholder="Enter your username"
+      label="Username"
+      type="text"
+      name="username"
+      handleChange={handleChange}
+      formData={formData}
+      error={error}
+    />
 
-        <div>
-          <button
-            onClick={handleSubmit}
-            className="bg-purple-500 hover:bg-purple-600 text-white rounded-lg w-full py-3 font-semibold transition-colors shadow-lg hover:shadow-xl cursor-pointer"
-          >
-            Sing up
-          </button>
-        </div>
+    <Input
+      Icon={Mail}
+      placeholder="Enter your email"
+      label="Email"
+      type="email"
+      name="email"
+      handleChange={handleChange}
+      formData={formData}
+      error={error}
+    />
 
-        <div>
-          <p className="text-center">
-            Already have an account?{" "}
-            <NavLink
-              to="/login"
-              className="text-purple-500 hover:text-purple-600 font-semibold cursor-pointer"
-            >
-              Log in
-            </NavLink>
-          </p>
-        </div>
-      </div>
+    <Input
+      Icon={Lock}
+      placeholder="Enter your password"
+      label="Password"
+      type="password"
+      Eye={Eye}
+      EyeOff={EyeOff}
+      showPassword={showPassword}
+      setShowPassword={setShowPassword}
+      name="password"
+      handleChange={handleChange}
+      formData={formData}
+      error={error}
+    />
+  </div>
+
+  <button
+    onClick={handleSubmit}
+    className="
+      bg-purple-600 hover:bg-purple-700
+      text-white rounded-lg w-full py-3
+      font-semibold
+      shadow-lg shadow-purple-900/40
+      hover:shadow-xl
+      transition-all cursor-pointer
+    "
+  >
+    Sign up
+  </button>
+
+  <p className="text-center text-gray-300 text-sm">
+    Already have an account?{" "}
+    <NavLink
+      to="/login"
+      className="text-purple-400 hover:text-purple-300 font-semibold"
+    >
+      Log in
+    </NavLink>
+  </p>
+</div>
+
     </div>
   );
 };
