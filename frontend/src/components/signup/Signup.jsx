@@ -106,6 +106,7 @@ const SignupForm = () => {
 
   <button
     onClick={handleSubmit}
+    disabled={loading}
     className="
       bg-purple-600 hover:bg-purple-700
       text-white rounded-lg w-full py-3

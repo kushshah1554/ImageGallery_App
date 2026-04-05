@@ -126,6 +126,7 @@ const Login = () => {
 
         <button
           onClick={handleLogin}
+          disabled={loading}
           className="
       bg-purple-600 hover:bg-purple-700
       text-white
