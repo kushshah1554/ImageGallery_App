@@ -13,6 +13,7 @@ const SignupForm = () => {
   });
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState({});
+  const [loading, setLoading] = useState(false);
   const navigate=useNavigate();
   const handleChange = (e) => {
     setFormData((c) => ({ ...c, [e.target.name]: e.target.value }));
@@ -28,6 +29,7 @@ const SignupForm = () => {
     if (!validate(formData, setError)) {
       return;
     }
+    setLoading(true);
     try {
       const { data } = await signofResponce();
 
@@ -37,6 +39,8 @@ const SignupForm = () => {
       navigate("/");
     } catch (error) {
       console.log(error);
+    }finally{
+      setLoading(false);
     }
   };
 
