@@ -115,7 +115,14 @@ const SignupForm = () => {
       transition-all cursor-pointer
     "
   >
-    Sign up
+    {loading ? (
+  <div className="flex items-center gap-2 justify-center">
+    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+    <span>Signing in...</span>
+  </div>
+) : (
+  "Sign in"
+)}
   </button>
 
   <p className="text-center text-gray-300 text-sm">
